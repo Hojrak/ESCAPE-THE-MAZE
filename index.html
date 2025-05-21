@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+15&family=Press+Start+2P&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css" />
+    <title>Escape The Maze</title>
+</head>
+<body>
+    <div class="game-wrapper">
+        <header class="game-header">
+            <h1 class="game-title">ESCAPE THE MAZE</h1>
+            <div class="game-stats">
+                <div class="stat-box">
+                    <span class="stat-label">TIME</span>
+                    <span id="time" class="stat-value">00:00</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-label">LIVES</span>
+                    <span id="lives" class="stat-value">Życia: ❤️❤️❤️</span>
+                </div>
+                <div class="theme-switcher">
+                  <button class="theme-btn" data-theme="default">🌞</button>
+                  <button class="theme-btn" data-theme="dark">🌙</button>
+                  <button class="theme-btn" data-theme="neon">🌈</button>
+                  <button class="theme-btn" data-theme="nature">🌿</button>
+              </div>
+            </div>
+        </header>
+
+        <div class="game-container">
+            <main class="game-area">
+                <canvas id="gameCanvas" width="600" height="600"></canvas>
+                <div class="controls-mobile">
+                    <button class="control-btn" id="upBtn">↑</button>
+                    <div>
+                        <button class="control-btn" id="leftBtn">←</button>
+                        <button class="control-btn" id="downBtn">↓</button>
+                        <button class="control-btn" id="rightBtn">→</button>
+                    </div>
+                </div>
+            </main>
+
+            <aside class="game-sidebar">
+                <button id="startGame" class="btn-primary">START GAME</button>
+                
+                <div class="game-instructions">
+                    <h2>JAK GRAC</h2>
+                    <ul>
+                        <li><span class="wall-example"></span> Czerwone bloki to ściany</li>
+                        <li><span class="exit-example"></span> Dotrzyj do zielonego pola aby uciec</li>
+                        <li>Masz tylko <span class="highlight">3 życia</span>!</li>
+                        <li>Unikaj uderzania ścian</li>
+                    </ul>
+                </div>
+
+                <div class="keyboard-keys">
+                    <h3>STEROWANIE</h3>
+                    <div class="keys-grid">
+                        <div class="key-top">W/↑</div>
+                        <div class="key-left">A/←</div>
+                        <div class="key-down">S/↓</div>
+                        <div class="key-right">D/→</div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
